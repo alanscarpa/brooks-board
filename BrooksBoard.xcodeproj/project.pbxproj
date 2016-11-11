@@ -11,6 +11,9 @@
 		452A028A1DD520510004DACB /* NahBra.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 452A02871DD520510004DACB /* NahBra.mp4 */; };
 		452A028B1DD520510004DACB /* Yas.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 452A02881DD520510004DACB /* Yas.mp4 */; };
 		452A028C1DD520510004DACB /* Yas.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 452A02881DD520510004DACB /* Yas.mp4 */; };
+		452A028F1DD61D3F0004DACB /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A028D1DD61D3F0004DACB /* MessageCollectionViewCell.swift */; };
+		452A02901DD61D3F0004DACB /* MessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452A028E1DD61D3F0004DACB /* MessageCollectionViewCell.xib */; };
+		452A02951DD629460004DACB /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A02941DD629460004DACB /* MessagesManager.swift */; };
 		457EC7211DBA7E20007A1F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457EC7201DBA7E20007A1F4E /* Assets.xcassets */; };
 		457EC7281DBA7E20007A1F4E /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 457EC7271DBA7E20007A1F4E /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		457EC72D1DBA7E20007A1F4E /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457EC72C1DBA7E20007A1F4E /* Messages.framework */; };
@@ -48,6 +51,9 @@
 /* Begin PBXFileReference section */
 		452A02871DD520510004DACB /* NahBra.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = NahBra.mp4; path = ../../../../NahBra.mp4; sourceTree = "<group>"; };
 		452A02881DD520510004DACB /* Yas.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Yas.mp4; path = ../../../../Yas.mp4; sourceTree = "<group>"; };
+		452A028D1DD61D3F0004DACB /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		452A028E1DD61D3F0004DACB /* MessageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCollectionViewCell.xib; sourceTree = "<group>"; };
+		452A02941DD629460004DACB /* MessagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		457EC71D1DBA7E20007A1F4E /* BrooksBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrooksBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457EC7201DBA7E20007A1F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457EC7221DBA7E20007A1F4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +78,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452A02911DD629040004DACB /* MessagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				452A02921DD6291A0004DACB /* Message Cell */,
+				457EC72F1DBA7E20007A1F4E /* MessagesViewController.swift */,
+				457EC7311DBA7E20007A1F4E /* MainInterface.storyboard */,
+			);
+			name = MessagesViewController;
+			sourceTree = "<group>";
+		};
+		452A02921DD6291A0004DACB /* Message Cell */ = {
+			isa = PBXGroup;
+			children = (
+				452A028D1DD61D3F0004DACB /* MessageCollectionViewCell.swift */,
+				452A028E1DD61D3F0004DACB /* MessageCollectionViewCell.xib */,
+			);
+			name = "Message Cell";
+			sourceTree = "<group>";
+		};
+		452A02931DD6293C0004DACB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				452A02941DD629460004DACB /* MessagesManager.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		457EC7161DBA7E20007A1F4E = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +145,8 @@
 		457EC72E1DBA7E20007A1F4E /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				457EC72F1DBA7E20007A1F4E /* MessagesViewController.swift */,
-				457EC7311DBA7E20007A1F4E /* MainInterface.storyboard */,
+				452A02931DD6293C0004DACB /* Utilities */,
+				452A02911DD629040004DACB /* MessagesViewController */,
 				457EC7341DBA7E20007A1F4E /* Assets.xcassets */,
 				457EC7361DBA7E20007A1F4E /* Info.plist */,
 			);
@@ -191,7 +224,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Intrepid Pursuits LLC";
 				TargetAttributes = {
 					457EC71C1DBA7E20007A1F4E = {
@@ -243,6 +276,7 @@
 			files = (
 				452A028C1DD520510004DACB /* Yas.mp4 in Resources */,
 				457EC7451DBA83D5007A1F4E /* corgi.jpg in Resources */,
+				452A02901DD61D3F0004DACB /* MessageCollectionViewCell.xib in Resources */,
 				452A028A1DD520510004DACB /* NahBra.mp4 in Resources */,
 				457EC7351DBA7E20007A1F4E /* Assets.xcassets in Resources */,
 				457EC7331DBA7E20007A1F4E /* MainInterface.storyboard in Resources */,
@@ -256,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452A028F1DD61D3F0004DACB /* MessageCollectionViewCell.swift in Sources */,
 				457EC7301DBA7E20007A1F4E /* MessagesViewController.swift in Sources */,
+				452A02951DD629460004DACB /* MessagesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +336,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -350,6 +387,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
